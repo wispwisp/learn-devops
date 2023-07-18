@@ -1,8 +1,6 @@
 FROM nginx:stable
 
-# default:
-# COPY site /usr/share/nginx/html
-
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY site /site
+COPY site /usr/share/nginx/html
+COPY default.conf /etc/nginx/conf.d/default.conf
+COPY myapp.conf /etc/nginx/conf.d/myapp.conf
 
