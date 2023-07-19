@@ -45,6 +45,9 @@ ex: `ri` replace character under cursor to i
 
 `.` repeat last command
 
+`:e filename`
+
+`bn` prev buffer
 
 ## bash
 `:!ls` execure bash command
@@ -107,3 +110,4 @@ any symbol can be used:
 `q`
 
 `@<symbol>`
+
