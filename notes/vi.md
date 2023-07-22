@@ -65,6 +65,8 @@ press number and action - repeates that n-times
 
 `:reg` what saved
 
+`:noh` to turn off highlighting until the next search:
+
 
 ## visual mode
 press `v`
