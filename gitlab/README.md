@@ -20,3 +20,14 @@ Inside container:
 gitlab-runner register --url http://web:8929 --token <...>
 ```
 
+
+### Seaprate runner
+```
+docker run --rm --network gitlab_default --name runner1 gitlab/gitlab-runner:alpine
+docker exec -it runner1 /bin/bash
+```
+
+After, register with commands above.
+
+(Attention - after register runner, redirection goes to 'web' URI in browser. Just change to localhost).
+

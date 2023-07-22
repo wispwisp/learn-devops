@@ -3,10 +3,10 @@ services:
   web:
     image: 'gitlab/gitlab-ce:latest'
     restart: always
-    hostname: 'localhost'
+    hostname: 'web'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://localhost:8929'
+        external_url 'http://web:8929'
         gitlab_rails['gitlab_shell_ssh_port'] = 2224
     ports:
       - '8929:8929'
@@ -24,7 +24,7 @@ services:
       #- './runner.crt:/etc/gitlab-runner/certs/ca.crt:ro'
 
 # GITLAB_OMNIBUS_CONFIG: |
-#   external_url 'https://localhost:8929'
+#   external_url 'https://web:8929'
 #   gitlab_rails['gitlab_shell_ssh_port'] = 2224
 #   letsencrypt['contact_emails'] = ['me@example.com']
  

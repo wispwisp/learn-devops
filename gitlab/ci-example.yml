@@ -1,0 +1,22 @@
+stages:
+  - deploy
+  - destroy
+
+deploy:
+  stage: deploy
+  tags:
+    - myrunner
+  before_script:
+    - touch file_example
+  script:
+    - echo "Hello"
+
+destroy:
+  stage: destroy
+  tags:
+    - myrunner
+  script:
+    - rm file_example
+  rules:
+    - when: always
+
