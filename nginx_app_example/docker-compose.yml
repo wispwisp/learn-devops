@@ -3,6 +3,12 @@ version: '3.4'
 services:
   app:
     image: example-app
-    build: ./app
+    build: ./app2
     ports:
     - "127.0.0.1:8000:8000"
+  nginx:
+    image: nginx-server
+    build: ./nginx
+    ports:
+    - "127.0.0.1:8080:80"
+
